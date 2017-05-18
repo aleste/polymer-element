@@ -1,0 +1,44 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="my-tag">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <!-- <h2>Hello [[prop1]]!</h2> -->
+
+    <ul>
+      <li class="header">[[title]]</li>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+
+  </template>
+
+  <script>
+    /**
+     * `my-tag`
+     * Test creacion elemento
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MyTag extends Polymer.Element {
+      static get is() { return 'my-tag'; }
+      static get properties() {
+        return {
+          title: {
+            type: String,
+            value: 'Menu Principal'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MyTag.is, MyTag);
+  </script>
+</dom-module>
